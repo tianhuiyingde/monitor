@@ -1,3 +1,12 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-11 14:22:04
+ * @LastEditTime: 2021-05-11 15:40:53
+ * @LastEditors: Please set LastEditors
+ * @Description: 饼图组件
+ * @FilePath: /monitor/src/components/BorderRadius.vue
+-->
+
 <template>
   <div class="echarts-box">
     <div id="main" :style="{ width: '300px', height: '400px' }"></div>
@@ -6,7 +15,6 @@
 
 <script>
 import * as echarts from "echarts";
-//https://v3.cn.vuejs.org/api/composition-api.html#setup
 import { ref, onMounted, onUnmounted } from "vue";
 
 export default {
@@ -14,14 +22,26 @@ export default {
   props: {
     msg: Array,
   },
+
+  /**
+   * @description: vue3.0的一些需要了解的常识
+   * @param //https://v3.cn.vuejs.org/api/composition-api.html#setup
+   */
   setup() {
+
+    /**
+     * @description: ref vue3.0详解setup中如何使用data,method,watch,computed,生命周期 
+     * @param https://www.jianshu.com/p/fb54fcc6a229
+     */
     let data = ref([
+      // 定义一个响应式数据
       { value: 1048, name: "搜索引擎" },
       { value: 735, name: "直接访问" },
       { value: 580, name: "邮件营销" },
       { value: 484, name: "联盟广告" },
       { value: 300, name: "视频广告" },
     ]);
+
     let echart = echarts;
 
     onMounted(() => {
@@ -36,9 +56,9 @@ export default {
     function initChart() {
       var chartDom = document.getElementById("main");
       var myChart = echarts.init(chartDom);
+
       // 把配置和数据放这里
       var option;
-      console.log(data.value, "--1--");
       var list = data.value;
 
       option = {
@@ -80,16 +100,17 @@ export default {
       };
 
       option && myChart.setOption(option);
-      window.onresize = function () {
-        //自适应大小
-        myChart.resize();
-      };
+
+      // 处理点击事件并且弹出数据名称
+      myChart.on("click", function (params) {
+        alert(params.name);
+      });
+
     }
     return { initChart };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
