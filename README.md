@@ -6,7 +6,8 @@
 初始化项目：``` vue create my-demo ```。 中间会有一些项目选项，按照自己的要求进行选择即可。
 至此，项目搭建完成。
 
-集成[Echarts](https://echarts.apache.org/zh/index.html) 和 [ElementUI](https://element-plus.org/#/zh-CN) ：按照官网教程选择版本，自行安装即可。
+集成[Echarts](https://echarts.apache.org/zh/index.html)  ：按照官网教程选择版本，自行安装即可。
+和 [ElementUI](https://element-plus.org/#/zh-CN) 在vue3.0中即可配置。
 
 ## 项目初始化
 ```
