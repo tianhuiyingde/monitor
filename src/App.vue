@@ -7,6 +7,7 @@
         <el-main>
           <HelloWorld msg="Welcome to Your Vue.js App" />
           <BorderRadius />
+          <BarChart />
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
@@ -17,12 +18,14 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import BorderRadius from "./components/BorderRadius.vue";
+import BarChart from "./components/BarChart.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
     BorderRadius,
+    BarChart,
   },
 };
 </script>
