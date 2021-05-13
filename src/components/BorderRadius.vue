@@ -35,11 +35,11 @@ export default {
      */
     let data = ref([
       // 定义一个响应式数据
-      { value: 1048, name: "搜索引擎" },
-      { value: 735, name: "直接访问" },
-      { value: 580, name: "邮件营销" },
-      { value: 484, name: "联盟广告" },
-      { value: 300, name: "视频广告" },
+      { value: 1048, name: "本周已上线" },
+      { value: 735, name: "测试完成待上线" },
+      { value: 580, name: "测试中" },
+      { value: 484, name: "开发中" },
+      { value: 300, name: "待排期" },
     ]);
 
     let echart = echarts;
