@@ -1,6 +1,6 @@
 <template>
   <div class=“echarts-box”>
-      <div id="main" :style="{width:'1800px',height:'300px'}"></div>
+      <div id="barChart" :style="{width:'1200px',height:'300px'}"></div>
   </div>
 </template>
 
@@ -8,10 +8,10 @@
   import * as echarts from "echarts";
   import {onMounted,onUnmounted} from "vue";
   export default {
-  name: 'BarChart',
-  props: {
+    name: 'BarChart',
+    props: {
     msg: Array,
-  },
+    },
     setup(){
       // let dimensions=['本周已上线', '测试完成待上线', '测试中', '开发中','待排期'];
       // let sourse= [
@@ -29,7 +29,7 @@
       });
 
       function initChart(){
-        var chartDom=document.getElementById("main");
+        var chartDom=document.getElementById("barChart");
         var myChart=echarts.init(chartDom);
         var option;
         option={
@@ -55,7 +55,7 @@
         
         option&&myChart.setOption(option);
 
-      };
+      }
       return{initChart};
     },
   };
