@@ -1,6 +1,6 @@
 <template>
   <div class=“echarts-box”>
-      <div id="main" :style="{width:'900px',height:'300px'}"></div>
+      <div id="main" :style="{width:'1800px',height:'300px'}"></div>
   </div>
 </template>
 
